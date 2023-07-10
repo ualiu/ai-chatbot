@@ -1,0 +1,7 @@
+node_modules
+/env.js
+# Local Netlify folder
+.netlify
+temp.md 
+terminal-commands.md 
+we-wingit-data.csv
