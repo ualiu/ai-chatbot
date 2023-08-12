@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from 'openai'
+import { process } from './env'
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -26,7 +27,7 @@ document.addEventListener('submit', (e) => {
 
 async function fetchReply(){
     const response = await openai.createCompletion({
-        model: 'davinci:ft-personal-2023-07-10-04-19-35',
+        model: 'davinci:ft-personal-2023-08-12-02-05-51',
         prompt: conversationStr,
         presence_penalty: 0,
         frequency_penalty: 0.3,

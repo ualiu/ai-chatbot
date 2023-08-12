@@ -14,6 +14,23 @@ html, body {
     font-family: 'Inter', sans-serif;
 }
 
+.main-title {
+    background-color: #24976f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight {
+    background-color: black;
+    color: white; /* if you want the text color to be white against the black background */
+}
+
+
+.h1-main-title {
+    font-size: 38px;
+}
+
 main {    
     background-color: slategrey;
     height: 100vh;
@@ -23,7 +40,6 @@ main {
 }
 
 /* chatbot elements */
-
 .chatbot-container {
     background-color: #16202C;
     width: 360px;
@@ -146,7 +162,6 @@ input[type="text"] {
 }
 
 /* text */
-
 h1 {
     font-size: 15px;
     color: var(--light-text);
@@ -165,7 +180,6 @@ h2 {
 }
 
 /* The cursor */
-
 @keyframes cursor-blink {
   0% {
     opacity: 0;
@@ -180,4 +194,75 @@ h2 {
     font-weight: 700;
     display: inline-block;
     animation: cursor-blink .5s steps(2) infinite;
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 500px) {
+    .h1-main-title {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .chatbot-container {
+        width: 95%;
+        min-width: 300px;  /* Ensuring it doesn't get too narrow */
+    }
+
+    .speech {
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 11px;
+    }
+
+    .supportId {
+        font-size: 9px;
+    }
+
+    .clear-btn {
+        font-size: 11px;
+    }
+
+    input[type="text"], button {
+        padding: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .chatbot-container {
+        min-width: 260px;  /* Adjusting for even smaller screens */
+    }
+
+    .h1-main-title {
+        font-size: 24px;
+    }
+
+    h1 {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 10px;
+    }
+
+    .supportId {
+        font-size: 8px;
+    }
+
+    .clear-btn {
+        font-size: 10px;
+    }
+
+    .logo {
+        width: 40px;
+    }
+
+    input[type="text"], button {
+        padding: 0.5em;
+    }
 }
